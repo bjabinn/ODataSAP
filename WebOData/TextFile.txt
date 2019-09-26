@@ -1,0 +1,4 @@
+﻿http://213.130.35.45:8000/sap/opu/odata/sap/zpruebaodata_srv/TextosGeneralesSet(Id='00000002',Idioma='ES') 
+con eso sería suficiente?
+usuario => SES_DT_02 
+pass => everisCentros04 

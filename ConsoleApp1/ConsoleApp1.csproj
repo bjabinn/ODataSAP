@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="edmx2.edmx" />
+    <None Remove="edmxSAP.edmx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="edmx2.edmx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="edmxSAP.edmx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.OData.Client" Version="7.5.1" />
+    <PackageReference Include="Microsoft.OData.Core" Version="7.5.1" />
+    <PackageReference Include="Microsoft.OData.Edm" Version="7.5.1" />
+    <PackageReference Include="Microsoft.Spatial" Version="7.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ODataClient1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ODataClient1.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ODataClient1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ODataClient1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

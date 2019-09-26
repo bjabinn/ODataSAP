@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WebOData.TextosGenerales>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @foreach (var texto in Model)
+    {
+        <p>@texto.Id - @texto.Idioma</p>
+    }
+
+</div>
